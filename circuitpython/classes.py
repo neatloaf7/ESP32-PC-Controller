@@ -3,6 +3,7 @@ from adafruit_display_shapes.rect import Rect
 from adafruit_display_shapes.circle import Circle
 from adafruit_display_shapes.triangle import Triangle
 import vectorio
+from theme import spotify_palette
 
 class Background:
     def __init__(self):
@@ -19,6 +20,12 @@ class MediaButton(displayio.Group):
         self.button = button
 
         if button == "play":
-            self.circle = vectorio.Circle(r=25, fill=0xb3b3b3)
-            self.triangle = 
+            self.circle = vectorio.Circle(radius=25, 
+                                          pixel_shader=spotify_palette, 
+                                          color_index=0)
+            
+            points = [(x1,y1), (x2,y2), (x3,y3)]
+            self.triangle = vectorio.Polygon(pixel_shader=spotify_palette,
+                                             points=points,
+                                             color_index=3)
 
