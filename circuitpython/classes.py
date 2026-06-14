@@ -24,8 +24,32 @@ class MediaButton(displayio.Group):
                                           pixel_shader=spotify_palette, 
                                           color_index=0)
             
-            points = [(x1,y1), (x2,y2), (x3,y3)]
+            points = [(14,0), (-7,13), (-7,-13)]
             self.triangle = vectorio.Polygon(pixel_shader=spotify_palette,
                                              points=points,
                                              color_index=3)
+            
+            self.append(self.circle)
+            self.append(self.triangle)
+
+        #if button == "ffwd":
+
+class PlayPauseButton(displayio.Group):
+    def __init__(self, x, y):
+
+        super().__init__(x=x, y=y)
+
+        self.is_paused = False
+
+        self.circle = vectorio.Circle(radius=25, 
+                                      pixel_shader=spotify_palette, 
+                                      color_index=0) 
+        points = [(14,0), (-7,13), (-7,-13)]
+        self.triangle = vectorio.Polygon(pixel_shader=spotify_palette,
+                                             points=points,
+                                             color_index=3)
+            
+        self.append(self.circle)
+        self.append(self.triangle)
+
 

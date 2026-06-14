@@ -9,7 +9,6 @@ import time
 import adafruit_focaltouch
 import terminalio
 from adafruit_display_text import label
-#from classes import MediaButton, Background
 
 displayio.release_displays()
 pixel = neopixel.NeoPixel(board.IO42, 1)
