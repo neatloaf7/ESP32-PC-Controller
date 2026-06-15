@@ -25,3 +25,6 @@ Board documentation [here](https://www.lcdwiki.com/2.8inch_ESP32-S3_Display)
       - Conversely do all spotify api calls
     - Convert album art to bmp and send over serial
     - Identify correct device when plugged in
+
+## Sample of diffusing layer
+<img width="975" height="563" alt="image" src="https://github.com/user-attachments/assets/879ce2b8-2baa-4e9b-b809-dcdf8b5e6846" />
